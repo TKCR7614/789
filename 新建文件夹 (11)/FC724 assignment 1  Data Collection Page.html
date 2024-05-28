@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Collection Page</title>
+    <link rel="stylesheet" href="FC724 assignment 2.css">
+</head>
+<body>
+    <header>
+        <h1>Student Feedback Form</h1>
+    </header>
+    <form action= "/submit" method="post" >
+         <input type="text" name="username" id="username" placeholder="Enter your username ">
+         <input type="text" name="student number" id="student number" placeholder="Enter your student number ">
+         <input type="text" name="email address" id="email address" placeholder="Enter your email address ">
+         <input type="text" name="The course you learn" id="The course you learn" placeholder="The course you learn">
+
+        <dl>
+            <dt>1.What is your grades obtained in each courses?(Short-form Answer)</dt>
+            <dd><textarea name="message" id="message1" rows="5" cols="60" placeholder “Type your message here” > </textarea></dd>
+            <dt>2.How you feel about the classes and teachers of the course?(Long-form Answer)</dt>
+            <dd><textarea name="message" id="message2" rows="5" cols="60" placeholder “Type your message here” > </textarea></dd>
+            <dt>3.What ability do you improve when you study in GIC?(Long-form Answer)  </dt>
+            <dd><textarea name="message" id="message3" rows="5" cols="60" placeholder “Type your message here” > </textarea></dd>
+
+            <dt>4.Do you have any suggestions to GIC?(Long-form Answer) </dt>
+             <dd><textarea name="message" id="message4" rows="5" cols="60" placeholder “Type your message here” > </textarea></dd>
+            <dt>5.Which part you think GIC can improve?(Multiple-choice Question)</dt>
+
+
+
+
+            <dd><input type="checkbox" name="a" value="a"> Classes quality
+            <input type="checkbox" name="b" value="b"> Collage services
+            <input type="checkbox" name="c" value="c"> social events in GIC</dd>
+
+
+            <dt>6.How you feel about studying in GIC?</dt>
+            <dd><select name="question" id="question">
+                <option value="vg">very good</option>
+                <option value="g">good</option>
+                <option value="nb">not bad</option>
+                <option value="b">bad</option>
+                <option value="vb">very bad</option>
+
+            </dd>
+
+        </dl>
+        <input type="button" value="Submit" />
+
+
+
+
+
+
+
+
+    </form>
+
+
+</body>
+</html>
