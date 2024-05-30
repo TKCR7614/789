@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Collection Page</title>
+    <!--<link rel="stylesheet" href="FC724 assignment 2.css">-->
+</head>
+<body>
+    <header>
+        <!-- use heading element to create a heading of this page -->
+        <h1>Student Feedback Form</h1>
+    </header>
+    <!-- use <form> element to defines the beginning and end of an HTML form -->
+    <form action= "/data_collection" method="post">
+         {{ form.hidden_tag() }}
+         <input type="text" name="username" id="username" placeholder="Enter your username">
+         <input type="text" name="student number" id="student number" placeholder="Enter your student number">
+         <input type="text" name="email address" id="email address" placeholder="Enter your email address">
+         <input type="text" name="The course you learn" id="The course you learn" placeholder="The course you learn">
+<!-- create a description list for the questionnaire, and use <dt> for the question and use <dd> for the answer area or selecting area    -->
+        <dl>
+            <dt>1.What is your grades obtained in each courses?(Short-form Answer)</dt>
+            <dd>{{ form.grades(rows=5, cols=60) }}</dd>
+            <dt>2.How you feel about the classes and teachers of the course?(Long-form Answer)</dt>
+            <dd>{{ form.feedback(rows=5, cols=60) }}</dd>
+            <dt>3.What ability do you improve when you study in GIC?(Long-form Answer)</dt>
+            <dd>{{ form.ability(rows=5, cols=60) }}</dd>
+            <dt>4.Do you have any suggestions to GIC?(Long-form Answer)</dt>
+            <dd>{{ form.suggestions(rows=5, cols=60) }}</dd>
+            <dt>5.Which part you think GIC can improve?(Multiple-choice Question)</dt>
+            <dd>{{ form.improvement() }}</dd>
+            <dt>6.How you feel about studying in GIC?</dt>
+            <dd>
+<!-- use <select> element to create a dropdown list    -->
+                <select name="question" id="question">
+                    <option value="vg">very good</option>
+                    <option value="g">good</option>
+                    <option value="nb">not bad</option>
+                    <option value="b">bad</option>
+                    <option value="vb">very bad</option>
+                </select>
+            </dd>
+        </dl>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
